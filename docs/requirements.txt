@@ -1,0 +1,7 @@
+tqdm
+Sphinx
+sphinx-book-theme
+sphinx-copybutton
+sphinx-autodoc-typehints
+myst-nb
+Pygments
