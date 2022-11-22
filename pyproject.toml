@@ -1,0 +1,37 @@
+[build-system]
+requires = ['setuptools>=61.0']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'cyjax'
+authors = [
+  { name='Mathis Gerdes', email='mathisgerdes@gmail.com' },
+]
+description = 'Numerical methods for Calabi-Yau metrics in JAX'
+readme = 'README.md'
+requires-python = '>=3.7'
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+]
+dependencies = [
+    'numpy',
+    'sympy',
+    'jax',
+    'jaxlib',
+    'chex',
+    'progeval',
+    'jax-autovmap',
+    'matplotlib',
+    'flax',
+    'optax',
+    'importlib-metadata; python_version<"3.8"',
+]
+dynamic = ['version']
+
+[tool.setuptools.dynamic]
+version = {attr = 'cyjax.__version__'}
+
+[tool.setuptools]
+py-modules = ['cyjax']

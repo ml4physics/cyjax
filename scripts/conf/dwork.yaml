@@ -1,0 +1,67 @@
+random_seed: null
+
+variety:
+  _target_: cyjax.Dwork
+  dim_variety: 3
+
+
+algebraic_metric:
+  _target_: cyjax.donaldson.AlgebraicMetric
+  variety: ${variety}
+  sections:
+    _target_: cyjax.donaldson.MonomialBasisFull
+    degree: 6  # degree for algebraic metric
+    dim_proj: null  # set within python; extracted from variety
+
+
+network:
+  _target_: cyjax.ml.HNetMLP
+  basis_size: null  # set within python; extracted from algebraic_metric
+  layer_sizes: [4096, 4096]
+  dropout_rates: null  # set null for no dropout
+  powers: [1, 2, 3, 4, 5]
+  sig_suppress: true
+  init_fluctuation: 1e-3
+  activation:
+    _target_: hydra.utils.get_method
+    path: jax.nn.sigmoid
+  # features
+  feature_angle: true  # complex angles
+  feature_abs: true    # |params ^ powers|
+  feature_parts: true  # (params ^ powers).real & (...).imag
+
+
+sampling:
+  sizes:
+    batch_size_params: 4  # number of complex moduli parameters per step
+    batch_size: 500  # number of sample points per set of moduli
+    buffer_size: 10  # number of samples to keep in buffer
+  param_bounds:
+    - 10  # 0 < |psi| < 10
+
+training:
+  opt:
+    _target_: optax.adam
+    learning_rate:
+      _target_: optax.exponential_decay
+      init_value: 1e-3
+      transition_steps: 20000
+      decay_rate: 1e-1
+      end_value: 1e-6
+
+  train_minutes: 140
+  log_every: 1000  # steps
+
+
+evaluation:
+  validation_count: 10  # evaluate accuracy at 10 randomly sampled points
+  sample_size: 1000  # number of MC samples used for sigma-accuracy
+  # after-training evaluation & plotting
+  run: true  # evaluate on grid & plot after training
+  grid_points: 10  # number of samples along each dimension
+  batch_size: 100  # number of evals to do in parallel
+
+# save data in new auto-generated folder
+hydra:
+  job:
+    chdir: True
