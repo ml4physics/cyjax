@@ -34,8 +34,8 @@ Inside the `docs` folder, run `make html` to generate the html version of the do
 be found in `docs/build/html`.
 
 # Related work
-Another library with a similar goal as this one is [CYMetric](https://github.com/pythoncymetric/cymetric>) .
-In contrast to CYMetric, here the algebraic ansatz for the Kähler potential from [Donaldson's algorithm](https://doi.org/10.4310/jdg/1090349449>) is used.
+Another library with a similar goal as this one is [CYMetric](https://github.com/pythoncymetric/cymetric) .
+In contrast to CYMetric, here the algebraic ansatz for the Kähler potential from [Donaldson's algorithm](https://doi.org/10.4310/jdg/1090349449) is used.
 While this ansatz is more restrictive, it automatically satisfies Kählerity and compatibility on patch overlaps.
 
 # Contributions
