@@ -1,3 +1,5 @@
+[![Tests](https://github.com/ml4physics/cyjax/actions/workflows/python-pytest.yml/badge.svg)](https://github.com/ml4physics/cyjax/actions/workflows/python-pytest.yml)
+
 # Calabi-Yau metrics with JAX
 **CYJAX** is a python library for numerically approximating Calabi-Yau metrics
 using machine learning implemented with the [JAX library](https://github.com/google/jax).
