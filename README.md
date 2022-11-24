@@ -41,3 +41,17 @@ While this ansatz is more restrictive, it automatically satisfies Kählerity and
 
 # Contributions
 Contributions are welcome, please open a pull request or get in touch!
+
+# Reference
+If you find this work useful, please cite
+
+```
+@article{gerdes2022cyjax,
+      title={CYJAX: A package for Calabi-Yau metrics with JAX}, 
+      author={Mathis Gerdes and Sven Krippendorf},
+      year={2022},
+      eprint={2211.12520},
+      archivePrefix={arXiv},
+      primaryClass={hep-th}
+}
+```
