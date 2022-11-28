@@ -65,7 +65,7 @@ napolean_use_rtype = False
 html_theme = "sphinx_book_theme"
 
 html_theme_options = {
-    "repository_url": "https://github.com/mathisgerdes/jax-calabi-yau-metrics",
+    "repository_url": "https://github.com/ml4physics/cyjax",
     "use_repository_button": True,
     "use_edit_page_button": True,
     "logo_only": True,
