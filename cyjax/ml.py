@@ -43,6 +43,8 @@ def cholesky_decode(diag: chex.Array, upper: chex.Array):
 
     The output of this function is then :math:`M M^\dagger`,
     which is Hermitian and positive-definite.
+    Indexing of the 1d `diag` array with respect to the upper triangular
+    is done as in :func:`np.triu_indices` (i.e. row-major).
 
     Args:
         diag: Real 1d-array of diagonal entries.
@@ -66,7 +68,8 @@ def cholesky_from_param(h_par):
     entries and the real and imaginary parts of the upper triangular entries.
 
     Args:
-        h_par: Real 1d-array.
+        h_par: Real 1d-array. This is simply a concatenation of `diag`
+            and `upper` arguments of :func:`cholesky_decode`.
     Returns:
         Hermitian, positive-definite matrix constructed by the
         Cholesky decomposition.

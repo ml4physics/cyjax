@@ -43,7 +43,7 @@ These are stored together in the :class:`AlgebraicMetric` object, which has meth
     donaldson.AlgebraicMetric.ricci
     donaldson.AlgebraicMetric.ricci_scalar
 ```
-g
+
 ## Internal: geometric objects
 
 Internally, the computation of geometric objects is contained in a computational graph.

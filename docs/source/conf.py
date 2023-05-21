@@ -51,7 +51,7 @@ source_suffix = [".rst", ".ipynb", ".md"]
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
-pygments_style = None
+pygments_style = 'colorful'
 
 autodoc_default_flags = ["members"]
 autosummary_generate = True

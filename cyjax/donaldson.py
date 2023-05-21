@@ -797,7 +797,7 @@ class AlgebraicMetric:
 
     @auto_vmap(zs=1, patch=0, params=1, h=2, dependent=0, grad_def=1)
     def ricci_scalar(self, h, zs, params, patch=None, dependent=None, grad_def=None):
-        """Compute the Kahler potential.
+        """Compute the Ricci scalar.
 
         Args:
             h: Hermitian matrix.

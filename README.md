@@ -6,7 +6,7 @@
 using machine learning implemented with the [JAX library](https://github.com/google/jax).
 It is meant to be accessible both on a top-level and in a modular way, exposing all intermediate lower-level functionality.
 The principle application is machine learning for the algebraic ansatz of the Kähler potential from [Donaldson's algorithm](https://doi.org/10.4310/jdg/1090349449).
-While this ansatz more restrictive compared to approximating the metric directly, it automatically satisfies Kählerity and compatibility on patch overlaps.
+While this ansatz is more restrictive compared to approximating the metric directly, it automatically satisfies Kählerity and compatibility on patch overlaps.
 As of now, this implementation is limited to varieties defined by a single defining equation on one complex projective space.
 A generalization to a wider class of cases is planned.
 
@@ -20,12 +20,29 @@ The configuration files use [hydra](https://hydra.cc) and can be used to change 
 While the code runs on both CPU and GPU (if JAX is installed to support this), the latter is advisable for large models.
 
 # Installation
+
+You may want to install the code in a new virtual environment.
+This can be created using `python -m venv cyjax-env` and activated using `source cyjax-env/bin/activate` from within the terminal at a desired working directory.
+
+Note: If a specific version of [JAX](https://github.com/google/jax) is required, e.g. with GPU support, next follow the instructions [here](https://github.com/google/jax#installation).
+Otherwise, by default the CPU version of JAX will be installed.
+
 Installation is easiest using [pip](https://packaging.python.org/en/latest/key_projects/#pip).
-From within the root folder of this repository, run `pip install --upgrade pip setuptools` followed by `pip install .` to install the package.
-If you intend to modify the code for development, use `pip install -e .` instead.
-If a specific version of [JAX](https://github.com/google/jax) is required, e.g. with GPU support, first follow the instructions [here](https://github.com/google/jax#installation).
+First, update it by running: `pip install --upgrade pip setuptools`.
+Then, depending on whether the code is intended to be modified for development, do either of the following:
+- Simply run `pip install git+https://github.com/ml4physics/cyjax.git`.
+- Download (or clone) the repository. 
+  Open the root folder of the repository in a terminal and then run `pip install -e .`. 
+  The `-e` flag will allow you to modify the code without having to reinstall it. 
 
 To run the scripts, additionally [hydra](https://hydra.cc) is required (`pip install --upgrade hydra-core`).
+
+## Requirements
+
+Currently, the code works with python versions greater or equal version `3.7`, both with or without JAX GPU support.
+
+The required packages, which are listed in `setup.py`, are automatically installed with the above installation process.
+Otherwise, they have to be installed manually.
 
 ## Building the documentation
 This project uses [sphinx](https://www.sphinx-doc.org) to generate the documentation.
