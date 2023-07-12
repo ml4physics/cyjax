@@ -7,13 +7,29 @@ It is meant to be accessible both as a top-level library as well as a toolkit of
 As of now, this implementation is limited to varieties given by a single defining equation on one complex projective space.
 A generalization to a wider class of cases is planned.
 
-Good places to start are the introduction and the tutorial notebooks listed below.
+Good places to start are the introduction and the tutorial notebooks listed below or this `introductory paper <https://inspirehep.net/literature/2514129>`_.
 More background can also be found in this `paper <https://inspirehep.net/literature/1835403>`_.
 Some background knowledge on `JAX <https://github.com/google/jax>`_ and
 `Flax <https://github.com/google/flax>`_ may be helpful.
 
 The introduction gives a summary of the mathematical context and aim of the library, which serves to give a broad overview to the structure and code of the library.
 The tutorials show how to use the library on a code level and give several examples.
+
+If you find this work useful, please cite::
+
+    @article{gerdes2022cyjax,
+        title = "{CYJAX: A package for Calabi-Yau metrics with JAX}",
+        author = "Gerdes, Mathis and Krippendorf, Sven",
+        eprint = "2211.12520",
+        archivePrefix = "arXiv",
+        primaryClass = "hep-th",
+        doi = "10.1088/2632-2153/acdc84",
+        journal = "Mach. Learn. Sci. Tech.",
+        volume = "4",
+        number = "2",
+        pages = "025031",
+        year = "2023"
+    }
 
 Conventions
 -----------

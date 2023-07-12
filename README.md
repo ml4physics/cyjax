@@ -64,11 +64,16 @@ If you find this work useful, please cite
 
 ```
 @article{gerdes2022cyjax,
-      title={CYJAX: A package for Calabi-Yau metrics with JAX}, 
-      author={Mathis Gerdes and Sven Krippendorf},
-      year={2022},
-      eprint={2211.12520},
-      archivePrefix={arXiv},
-      primaryClass={hep-th}
+    title = "{CYJAX: A package for Calabi-Yau metrics with JAX}",
+    author = "Gerdes, Mathis and Krippendorf, Sven",
+    eprint = "2211.12520",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-th",
+    doi = "10.1088/2632-2153/acdc84",
+    journal = "Mach. Learn. Sci. Tech.",
+    volume = "4",
+    number = "2",
+    pages = "025031",
+    year = "2023"
 }
 ```
